@@ -18,7 +18,7 @@ class Solution {
         return answer;
     }
     
-    static void recursion(String word, String str, int depth) {
+    private void recursion(String word, String str, int depth) {
         list.add(str);
         
         if(depth == 5) {
