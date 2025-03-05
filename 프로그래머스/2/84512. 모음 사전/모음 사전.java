@@ -7,7 +7,7 @@ class Solution {
     public int solution(String word) {
         int answer = 0;
         
-        recursion(word, "", 0);
+        recursion("", 0);
         
         for (int i = 0; i < list.size(); i++) {
             if(list.get(i).equals(word)) {
@@ -18,7 +18,7 @@ class Solution {
         return answer;
     }
     
-    private void recursion(String word, String str, int depth) {
+    private void recursion(String str, int depth) {
         list.add(str);
         
         if(depth == 5) {
@@ -26,7 +26,7 @@ class Solution {
         }
         
         for (int i = 0; i < arr.length; i++) {
-            recursion(word, str + arr[i], depth + 1);
+            recursion(str + arr[i], depth + 1);
         }
     }
 }
